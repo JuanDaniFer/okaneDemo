@@ -1,0 +1,8 @@
+POST https://ws.conectaguate.com/api/auth/login
+content-type: application/json
+
+{
+    "email": "dvasquez@innovafv.com",
+    "password": "6ndwx0",
+    "remember_me": true
+}

@@ -1,0 +1,151 @@
+<header>
+    <div class="menu-area">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="t-bar d-flex justify-content-between p-3">
+                    <div class="logo-area d-flex">
+                        <div class="sidebar-toggle-icon"> 
+                            <div class="line top-line"></div>
+                            <div class="line middle-line"></div>
+                            <div class="line bottom-line"></div>
+                        </div>
+                        <div class="menu-logo d-flex justify-content-start">
+                            <a href="/index.html"><img src="/images/logo.png" alt="Bac Credomatic"></a>
+                            <div class="user-info text-white ps-3">
+                                <h5>Hola! <%-name %> </h5>
+                                <p>Ultima Vista 22/03/2022 | 17:23:44</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-area">
+                        <ul>
+                            <li><a href="#"><i class="fa-solid fa-message"></i></a></li>
+                            <li><a href="#"><i class="fa-solid fa-bell"></i></a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="main-menu">
+                    <div class="menu-item h-100 w-100">
+                        <div class="our-menu h-100 w-100">
+                            <nav>
+                                <ul class="toggle-item pt-1">
+                                    <li><a class="ipp active" href="index.html"> <i class="fa-solid fa-house"></i> <span>Resumen de productor</span></a></li>
+                                    <li class="consultar">
+                                        <a class="ipp d-flex justify-content-between" href="#"> 
+                                            <span class="m-txt">
+                                                <i class="fa-solid fa-calendar-days"></i>
+                                                <span>Consultar</span>
+                                            </span>
+                                            <i class="fa-solid fa-angle-down"></i>
+                                        </a>
+                                        <div class="xpp">
+                                            <ul id="consultar">
+                                                <li><a href="#">All</a></li>
+                                                <li><a href="#">Action</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="transferir">
+                                        <a class="ipp d-flex justify-content-between" href="#">
+                                            <span class="m-txt">
+                                                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                                                <span>Transferir</span>
+                                            </span>
+                                            <i class="fa-solid fa-angle-down"></i>
+                                        </a>
+                                        <div class="xpp">
+                                            <ul id="transferir">
+                                                <li><a href="#">Accout</a></li>
+                                                <li><a href="#">Withdrawal</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="pagar">
+                                        <a class="ipp d-flex justify-content-between" href="#">
+                                            <span class="m-txt">
+                                                <i class="fa-solid fa-sack-dollar"></i>
+                                                <span>Pagar</span>
+                                            </span>
+                                            <i class="fa-solid fa-angle-down"></i>
+                                        </a>
+                                        <div class="xpp">
+                                            <ul id="pagar">
+                                                <li><a href="#">Cash</a></li>
+                                                <li><a href="#">Chaque</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="pay">
+                                        <a class="ipp d-flex justify-content-between" href="#">
+                                            <span class="m-txt">
+                                                <i class="fa-solid fa-money-bill-1"></i>
+                                                <span>BAC Pay</span>
+                                            </span>
+                                            <i class="fa-solid fa-angle-down"></i>
+                                        </a>
+                                        <div class="xpp">
+                                            <ul id="pay">
+                                                <li><a href="#">Invest</a></li>
+                                                <li><a href="#">Deposit</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="configurar">
+                                        <a class="ipp d-flex justify-content-between" href="#">
+                                            <span class="m-txt">
+                                                <i class="fa-solid fa-sliders"></i>
+                                                <span>Configurar</span>
+                                            </span>
+                                            <i class="fa-solid fa-angle-down"></i>
+                                        </a>
+                                        <div class="xpp">
+                                            <ul id="configurar">
+                                                <li><a href="#">File</a></li>
+                                                <li><a href="#">Memory</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="on-txt text-white text-center py-3 ps-0"> <span>Tipo de cambio</span> </li>
+                                    <li class="d-flex justify-content-between pe-2">
+                                        <select id="qtz">
+                                            <option value="QTZ">QTZ</option>
+                                            <option value="USD">USD</option>
+                                            <option value="INR">INR</option>
+                                            <option value="CD">CD</option>
+                                        </select>
+                                        <span class="a-ico"><i class="fa-solid fa-right-long"></i></span>
+                                        <select id="qtz">
+                                            <option value="USD">USD</option>
+                                            <option value="QTZ">QTZ</option>
+                                            <option value="INR">INR</option>
+                                            <option value="CD">CD</option>
+                                        </select>
+                                    </li>
+                                    <li class="d-flex justify-content-between py-3">
+                                        <div class="compair text-white">
+                                            <p class="fst mb-2">Compra Q 7.48</p>
+                                            <p class="snd">Venta Q 7.88</p>
+                                        </div>
+                                        <div class="compair-ico text-center text-white pe-4 pt-3">
+                                            <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <nav class="s-menu">
+                                <ul class="toggle-item">
+                                    <form action="/users/logout" method="post">
+                                        <li><a class="ipp" href="#"> <i class="fa-solid fa-arrow-right-from-bracket"></i> 
+                                            <input class="submit" type="submit" value="Salir">
+                                        </a></li>
+                                    </form>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

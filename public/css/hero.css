@@ -1,0 +1,139 @@
+.work-box {
+    padding-left: 250px;
+}
+.box-timer,
+.link-box {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.box-timer p {
+    font-size: 14px;
+    color: #666;
+}
+.single-link-box {
+    background-color: #fff;
+    padding: 24px 30px 80px 40px;
+}
+.link-heading {
+    margin-bottom: 32px;
+}
+.link-heading h4 {
+    font-size: 16px;
+    color: #E62A29;
+    border-bottom: 2px solid #e62a29;
+    padding-bottom: 10px;
+}
+.link-name {
+    margin-bottom: 40px;
+}
+.link-name h4 {
+    font-size: 16px;
+}
+form {
+    margin-left: 85px;
+}
+.moneda span, .cuenta span, .monto label {
+    font-size: 14px;
+    display: inline-block;
+}
+.cuenta span {
+    margin-right: 5px;
+}
+.monto label {
+    margin-right: 10px;
+    cursor: pointer;
+}
+.moneda select, .cuenta select {
+    font-size: 14px;
+    padding: 5px 8px;
+    background-color: #fff;
+    border: 1px solid #000;
+}
+.cuenta select {
+    width: 250px;
+}
+.monto input {
+    font-size: 14px;
+    padding: 4px 8px;
+    outline: none;
+    border: 1px solid #000;
+}
+form p {
+    font-size: 10px;
+}
+.submit {
+    color: #fff;
+    border: none;
+    outline: none;
+    background-color: #E62A29;
+    padding: 8px 15px;
+    font-size: 14px;
+    display: inline-block;
+    margin-left: 24px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid #E62A29;
+}
+.submit:hover {
+    color: #E62A29;
+    background-color: #fff;
+}
+
+/* Responsive  */
+@media all and (max-width: 991px){
+    .box-timer, .link-box {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    .single-link-box {
+        padding: 24px 24px 80px;
+    }
+    form {
+        margin-left: 64px;
+    }
+}
+@media all and (max-width: 575px){
+    form {
+        margin-left: 0;
+    }
+    .submit {
+        margin: 0;
+    }
+    .monto input {
+        width: 180px;
+    }
+    .cuenta select {
+        width: 220px;
+    }
+}
+@media all and (max-width: 480px){
+    .box-timer p {
+        font-size: 12px;
+    }
+    .box-timer, .link-box {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .single-link-box {
+        padding: 16px 8px 60px;
+    }
+    .link-heading h4 {
+        font-size: 14px;
+    }
+    .link-name h4 {
+        font-size: 14px;
+    }
+    .moneda span, .cuenta span, .monto label {
+        font-size: 12px;
+    }
+    .monto input {
+        font-size: 12px;
+    }
+    .moneda select, .cuenta select {
+        font-size: 12px;
+    }
+    .submit {
+        font-size: 12px;
+    }
+}
+

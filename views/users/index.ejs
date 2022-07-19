@@ -1,0 +1,79 @@
+ <%- include('../partials/head.ejs') %>
+<style>
+    .h-custom {
+    height: calc(100% - 73px);
+    }
+    .myprimary{
+      color: #e5002b ;
+      background-color: #e5002b;
+    }
+
+    .btn:hover {
+     background-color : #e5002b;
+    }
+
+    @media (max-width: 450px) {
+    .h-custom {
+    height: 100%;
+    }
+
+   
+    }
+</style>
+<section class="vh-100">
+    <div class="container-fluid h-custom ">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col myprimary col-md-9 col-lg-6 col-xl-5">
+          <img src="/images/RedBacLogo.png"
+            class="img-fluid" alt="Sample image">
+        </div>
+        <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+
+          <% if (messages.error) {%> 
+            <%= messages.error %>
+          <% } %>
+
+          <form action="/users/login" method="post">
+            <h1>Sign In</h1>
+            <br>
+  
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+              <input name = "email" type="email" id="form3Example3" class="form-control form-control-lg"
+                placeholder="Enter a valid email address" />
+              <label class="form-label" for="form3Example3">Email address</label>
+            </div>
+  
+            <!-- Password input -->
+            <div class="form-outline mb-3">
+              <input name= "password" type="password" id="form3Example4" class="form-control form-control-lg"
+                placeholder="Enter password" />
+              <label class="form-label" for="form3Example4">Password</label>
+            </div>
+  
+            <div class="text-center text-lg-start mt-4 pt-2">
+              <button type="submit" class=" myprimary  btn btn-lg"
+                style="padding-left: 2.5rem; padding-right: 2.5rem; color:white">Login</button>
+              <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="#!"
+                  class="link-danger">Register</a></p>
+            </div>
+
+            <% if (link != null) { %>
+              <input name= "link" type="hidden" value="<%= link %>" >
+              <% } %>
+  
+          </form>
+        </div>
+      </div>
+    </div>
+    <div
+      class=" myprimary d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5">
+      <!-- Copyright -->
+      <div class="text-white mb-3 mb-md-0">
+        Copyright © 2020. All rights reserved.
+      </div>
+      <!-- Copyright -->
+    </div>
+  </section>
+
+  <%- include('../partials/footer.ejs') %>

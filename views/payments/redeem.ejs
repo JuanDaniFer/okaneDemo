@@ -1,0 +1,50 @@
+<main>
+
+    <section>
+        <div class="work-box">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="box-timer pt-3 pb-4">
+                            <div class="box-timer-right d-flex justify-content-end">
+                                <p>17:15:06 (GMT-0600) | Fecha : 27/03/2022</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="link-box">
+                            <div class="single-link-box">
+                                <div class="link-heading">
+                                    <h4>Links de Pago</h4>
+                                </div>
+                                <div class="link-name ms-sm-4">
+                                    <h4>Innova FV, SA</h4>
+                                </div>
+                                <form action="/payments/redeem" method="post">
+                                    <h4> Link Codigo : <%= link.name %> </h4>
+                                    <div class="monto mb-3">
+                                        <label for="mont">Monto: </label>
+                                        <input readonly name="value" type="text" value="<%= link.value %>">
+                                    </div>
+                                    <div class="cuenta mb-3">
+                                        <span>Cuenta: </span>
+                                        <select name="account" id="cuen">
+                                            <% accounts.forEach(account => { %>
+                                                <option value="<%=account.id%>"> <%=account.name + ' - Q' + account.value%> </option>
+                                             <% }) %>
+                                        </select>
+                                    </div>
+                                    <p class="mb-4">*Cuenta banceria en donde desea enviar los fondos.</p>
+                                    <input name="link" type="hidden" value="<%= link.id %>">
+                                    <input class="submit" type="submit" value="Enviar Link de Pago">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
