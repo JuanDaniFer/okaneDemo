@@ -17,6 +17,7 @@
     "express-ejs-layouts": "^2.5.1",
     "express-partials": "^0.3.0",
     "mongoose": "^6.4.4",
-    "nodemon": "^2.0.19"
+    "nodemon": "^2.0.19",
+    "passport": "^0.6.0"
   }
 }
