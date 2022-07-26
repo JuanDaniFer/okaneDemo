@@ -47,22 +47,30 @@ router.post('/generatePaymentLink',async (req,res) => {
 })
 
 router.get('/redeem',checkAuthenticated, async(req,res) => {
-    const link = await Link.findOne({"name":req.query.link})
+    let success = false
+    let link = {}
+    if (req.query.success == 'true'){
+        success = true
+        link = {
+            name : req.query.link,
+            value : 0
+        }
+    }else{
+        link = await Link.findOne({"name":req.query.link})
+    }
     const accounts = await Account.find({user: req.user})
     res.render('payments/redeem', {
         name:req.user.name,
         accounts:accounts,
-        link:link
+        link:link,
+        success:success
     })
 })
-
 
 router.post('/redeem', async(req,res) => {
     const link = await Link.findById(req.body.link)
     const receipient = await Account.findById(link.account)
     const sender = await Account.findById(req.body.account)
-    console.log(receipient)
-    console.log(sender)
     try {
         console.log(sender.value - link.value)
         sender.value = sender.value - link.value
@@ -71,7 +79,8 @@ router.post('/redeem', async(req,res) => {
         receipient.value = receipient.value + link.value
         await receipient.save()
         link.remove()
-        res.redirect('/payments')
+        console.log('redirecting')
+        res.redirect(`/payments/redeem/?link=${link.name}&success=true`)
     }catch(err){
         res.send(err)
     }

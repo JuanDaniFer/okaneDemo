@@ -23,11 +23,7 @@
                                     <h4>Innova FV, SA</h4>
                                 </div>
                                 <form action="/payments/redeem" method="post">
-                                    <h4> Link Codigo : <%= link.name %> </h4>
-                                    <div class="monto mb-3">
-                                        <label for="mont">Monto: </label>
-                                        <input readonly name="value" type="text" value="<%= link.value %>">
-                                    </div>
+                                    <h4> Link Código : <%= link.name %> </h4>
                                     <div class="cuenta mb-3">
                                         <span>Cuenta: </span>
                                         <select name="account" id="cuen">
@@ -36,9 +32,19 @@
                                              <% }) %>
                                         </select>
                                     </div>
-                                    <p class="mb-4">*Cuenta banceria en donde desea enviar los fondos.</p>
+                                    <p class="mb-4">*Cuenta bancaria en donde desea enviar los fondos.</p>
+                                    <% if (success) { %>
+                                        <div class="alert alert-success" role="alert"> 
+                                            <h4>Pago exitoso</h4>
+                                        </div>
+                                    <% }else {  %>
+                                    <div class="monto mb-3">
+                                        <label for="mont">Monto: </label>
+                                        <input readonly name="value" type="text" value="<%= link.value %>">
+                                    </div>
                                     <input name="link" type="hidden" value="<%= link.id %>">
-                                    <input class="submit" type="submit" value="Enviar Link de Pago">
+                                    <input class="submit" type="submit" value="Pagar">
+                                    <% } %>
                                 </form>
                             </div>
                         </div>

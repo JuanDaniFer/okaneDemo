@@ -51,5 +51,5 @@ app.use('/users', userRouter)
 app.use('/accounts', accountRouter)
 app.use('/payments', paymentRouter)
 
-app.listen(process.env.PORT || 3000)
+app.listen(process.env.PORT || 3001)
  

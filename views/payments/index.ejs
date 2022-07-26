@@ -42,12 +42,14 @@
                                              <% }) %>
                                         </select>
                                     </div>
+                                    <p class="mb-4">*Cuenta bancaria en donde desea recibir los fondos.</p>
                                     <% if (link != null ){ %>
-                                        <input type="text" value='<%=link%>'>
-                                    <% } %>
-                                    <p class="mb-4">*Cuenta banceria en donde desea recibir los fondos.</p>
-
+                                        <input id='link' type="text" value='<%=link%>'>
+                                        <button type="button" style='color:white;background-color:#e5002b' class="btn" onclick="myFunction()">Copiar </button>
+                                    <% }else { %>
                                     <input class="submit" type="submit" value="Generar Link de Pago">
+
+                                    <% } %>
                                 </form>
                             </div>
                         </div>
@@ -57,3 +59,16 @@
         </div>
     </section>
 </main>
+<script>
+    function myFunction() {
+  /* Get the text field */
+  var copyText = document.getElementById("link");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+   /* Copy the text inside the text field */
+  navigator.clipboard.writeText(copyText.value);
+    }
+</script>
