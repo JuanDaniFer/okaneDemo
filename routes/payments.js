@@ -6,8 +6,11 @@ const Link = require('../models/link')
 
 router.get('/',async (req,res) => {
     let link = null
+    let amount = ""
     if(req.query.link != undefined){
         link = req.query.link
+        amount = await Link.findOne({"name":req.query.link})
+        amount = amount.value
 
         var url = require('url');
         address = url.format({
@@ -23,7 +26,8 @@ router.get('/',async (req,res) => {
         res.render('payments/index', {
             name:req.user.name,
             accounts:accounts,
-            link:link
+            link:link,
+            amount:amount
         })
     }catch {
         console.log('Error')
